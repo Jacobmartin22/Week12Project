@@ -11,10 +11,10 @@ var app = new function() {
             for(i=0; i<this.tasks.lengths; i++){
                 data+='<tr>';
                 data+='<td>'+(i+1)+'. '+this.task[i]+'</td>';
-                data+='<td><Button onclick="app.Edit('+i+')"
-                class="btn btn-warning">Edit</button></td> ';
-                data+='<td><Button onclick="app.Delete('+i+')"
-                class="btn btn-danger">Delete</button></td> ';
+                data+='<td><Button onclick="app.Edit('+i+')'
+                class='btn btn-warning">Edit</button></td> ';
+                data+='<td><Button onclick="app.Delete('+i+')'
+                class='btn btn-danger">Delete</button></td> ';
                 data+='</tr>'
             };
         }
