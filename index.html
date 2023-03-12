@@ -1,31 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hotels</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Things I need To Do!!</title>
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="node_modules/jquery/dist/jquery.js">
-<body>
+    <link rel="stylesheet"  href=".css">
     <div class = "title">
-        <h1>Hotels!</h1>
-        <p>That are available for you</p>
+        <h1>Oh Crap</h1>
+        <p>Things I need To Do</p>
     </div>
 
     <div class = "form">
-        <form action="javascript:void(0)" method = "POST"
-        onsubmit="app.add()">
-           <input type="text" id="addhotel" placeholder="New Hotel">
+        <form action="javascript:void(0);" method = "POST"
+        onsubmit="app.Add()">
+           <input type="text" id="add-todo" placeholder="New Task">
            <input type="submit" value="Add" class="btn btn-primary">
            
         </form>
-        <p>Hotels Avaliable</p>
+        <p>You Have</p>
            <p id="counter"></p>
            <table>
-                <tr class = "NewHotels">
-                  <th><h3>New Hotels:</h3></th>
+                <tr class = "to-do">
+                  <th><h3>To-Do:</h3></th>
                 </tr>
               <tbody id = "tasks">
               </tbody>
@@ -34,16 +33,18 @@
 
     </div>
     
-    <div id="edit-box" role="aria-hidden">
-        <form action="javascript:void(0)" method="POST" 
+    <div id="edit-box"  role=aria-hidden>
+        <form action="javascript:void(0);" method="POST" 
         id="save-edit">
-            <input type="text" id="edit-hotels">
+            <input type="text" id="edit-todo" placeholder="Edit Task"> 
             <input type="submit" value="Save" class="btn 
             btn-success">
             <a onclick="CloseInput()" aria-label="Close">&#10006;</a>
         </form>
     </div>
     <script src="index.js"></script>
+    
+    
     
 </body>
 </html>
