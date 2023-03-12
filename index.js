@@ -1,77 +1,56 @@
-class Hotel {
-    constructor (name) {
-        this.name=this.name;
-        this.rooms=[];
-    }
-    addRoom (name, area) {
-        this.rooms.push(new Room(name, area));
-    }
-}
-class Room {
-    constructor(name, area) {
-     this.name=name;
-     this.area=area;   
-    }
-}
+const { Button } = require("bootstrap");
 
-var http = (http)
+var app = new function() {
+    this.el=document.getElementById('Tasks')
+    this.tasks=[]
 
-class HotelService {
-    static url = http//universities.hipolabs.com/search?country=United+States;
-    
-    static getAllHotels () {
-        return $.get(this.url);
-    }
+    this.fetchAll; {
+        var data="";
 
-    static get(id) {
-        return $.get(this.url + `/${id}`);
-    }
-
-    static createHotel(hotel) {
-        return $.post(this.url, hotel)
-    }
-
-    static updateHotel(hotel) {
-        return $.ajax({
-            url: this.url + `/${hotel._id}`,
-            dataType: 'json',
-            data: JSON.stringify(hotel),
-            contentType: 'application/json',
-            type: 'PUT'
-        })
-    }
-
-    static deleteHotel(hotel) {
-        return $.ajax({
-            url: this.url + `/${id}`,
-            type: 'DELETE'
-        })
-    }
-}  
-
-class DomManager {
-    static hotels;
-
-    static getAllHotels(){
-        HotelService.getAllHotels().then(hotels => this.render(hotels));
-    }
-
-    static render(hotels) {
-        this.hotel=hotels
-        $('#app').empty();
-        for(let hotel of hotels) {
-            $('#app').prepend(
-            `<div id= "${hotel._id}" class ="card">
-               <div class="card-header">
-                <h2> ${hotel.name}</h2>
-               </div>
-            </div>
-             `
-
-            );
+        if(this.tasks.length>0){
+            for(i=0; i<this.tasks.lengths; i++){
+                data+='<tr>';
+                data+='<td>'+(i+1)+'. '+this.task[i]+'</td>';
+                data+='<td><Button onclick="app.Edit('+i+')"
+                class="btn btn-warning">Edit</button></td> ';
+                data+='<td><Button onclick="app.Delete('+i+')"
+                class="btn btn-danger">Delete</button></td> ';
+                data+='</tr>'
+            };
         }
-    }
-}
+        this.count(this.tasks.length);
+        return this.el.innerHTML = data;
+    };
 
-DomManager.getAllHotels();
-        
+    this.Add= function(){
+        el= document.getElementById('add-hotel');
+        var task=el.value;
+        if(task){
+            this.tasks.push(task.trim());
+            el.value='';
+            this.FetchAll
+        }
+
+    };
+
+    this.Edit = function(item) {
+
+    };
+
+    this.Delete = function(item) {
+
+    };
+
+    this.Count = function(data) {
+
+    };
+ 
+    }
+
+
+
+app.FetchAll();
+
+function CloseInput() {
+    document.getElementById('edit-box').style.display= 'none';
+}

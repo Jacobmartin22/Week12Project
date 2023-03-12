@@ -1,24 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hotel App</title>
+    <title>Hotels</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
-</head>
-<body class ="container">
-    <div id = "New Hotel" class ="jumbotron">
-     <h2>New Hotel</h2>
-     <input type= "text" id= "New-Hotel-Name" class= "form-control"> <br>
-     <button id="Create-New-Hotel" class="btn btn-primary form-control">Create</button>
+    <link rel="stylesheet" href="node_modules/jquery/dist/jquery.js">
+<body>
+    <div class = "title">
+        <h1>Hotels!</h1>
+        <p>That are available for you</p>
     </div>
 
-    <div id="">
+    <div class = "form">
+        <form action="javascript:void(0)" method = "POST"
+        onsubmit="app.add()">
+           <input type="text" id="addhotel" placeholder="New Hotel">
+           <input type="submit" value="Add" class="btn btn-primary">
+           
+        </form>
+        <p>Hotels Avaliable</p>
+           <p id="counter"></p>
+           <table>
+                <tr class = "NewHotels">
+                  <th><h3>New Hotels:</h3></th>
+                </tr>
+              <tbody id = "tasks">
+              </tbody>
+              
+            </table>
 
     </div>
-    <script src="node_modules/jquery/dist/jquery.js"></script>
+    
+    <div id="edit-box" role="aria-hidden">
+        <form action="javascript:void(0)" method="POST" 
+        id="save-edit">
+            <input type="text" id="edit-hotels">
+            <input type="submit" value="Save" class="btn 
+            btn-success">
+            <a onclick="CloseInput()" aria-label="Close">&#10006;</a>
+        </form>
+    </div>
     <script src="index.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    
 </body>
 </html>
